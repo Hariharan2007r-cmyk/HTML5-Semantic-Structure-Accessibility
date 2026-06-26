@@ -1,0 +1,13 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const submitBtn = document.querySelector('.submit-btn');
+
+  if (submitBtn) {
+    submitBtn.addEventListener('click', () => {
+      submitBtn.setAttribute('aria-pressed', 'true');
+      submitBtn.textContent = 'Submitted ✓';
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+      submitBtn.style.cursor = 'not-allowed';
+    });
+  }
+});
