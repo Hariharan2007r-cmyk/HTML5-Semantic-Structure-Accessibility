@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Assignment Card — HTML5 Semantic Structure & Accessibility</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="visually-hidden">
+    <h1>Assignment Details</h1>
+  </header>
+
+  <main class="page">
+    <article class="card" aria-labelledby="assignment-title">
+
+      <!-- Top Row -->
+      <div class="row top-row">
+        <div class="number-badge" aria-label="Assignment number 1">1</div>
+        <span class="badge badge-available" role="status">AVAILABLE</span>
+      </div>
+
+      <!-- Second Row -->
+      <div class="row meta-row">
+        <div class="due-date">
+          <svg class="icon-calendar" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="4.5" width="18" height="16" rx="2" stroke="#64748B" stroke-width="1.6"/>
+            <line x1="3" y1="9" x2="21" y2="9" stroke="#64748B" stroke-width="1.6"/>
+            <line x1="7.5" y1="2.5" x2="7.5" y2="6.5" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="16.5" y1="2.5" x2="16.5" y2="6.5" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span>Due Date: <strong>08 Jun 2026</strong></span>
+        </div>
+        <span class="badge badge-overdue" role="status">Overdue by 17 Days</span>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Main Content -->
+      <section aria-labelledby="assignment-title">
+        <h2 id="assignment-title" class="title">HTML5 Semantic Structure &amp; Accessibility</h2>
+        <p class="description">
+          Build a multi-page personal portfolio website adhering strictly to modern semantic HTML5 standards and WCAG accessibility guidelines.
+        </p>
+      </section>
+
+      <section aria-labelledby="key-features-heading">
+        <h3 id="key-features-heading" class="heading heading-blue">Key Features:</h3>
+        <ul class="feature-list">
+          <li>Use semantic tags (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>)</li>
+          <li>Implement ARIA labels and roles for screen readers</li>
+          <li>Create optimized, SEO-friendly meta tags</li>
+          <li>Include an accessible, tab-navigable contact form</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="expected-outcome-heading">
+        <h3 id="expected-outcome-heading" class="heading heading-green">Expected Outcome:</h3>
+        <p class="description">
+          A fully accessible, semantic skeleton of a portfolio website that scores 100 on Lighthouse Accessibility and SEO audits.
+        </p>
+      </section>
+
+      <footer class="card-footer">
+        <button type="button" class="submit-btn" aria-label="Submit your work for this assignment">
+          Submit Work
+        </button>
+      </footer>
+
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
